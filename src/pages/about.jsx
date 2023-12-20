@@ -78,7 +78,7 @@ export default function About() {
               </div>
             </div>
             <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-              <Image className="cursor-pointer w-8 sm:w-auto" src="/esthete.png" alt="logo" width={200} height={200} />
+              <Image className="cursor-pointer w-8 sm:w-auto" src="/jeshoots-com-__ZMnefoI3k-unsplash.jpg" alt="logo" width={500} height={500} />
             </div>
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4">

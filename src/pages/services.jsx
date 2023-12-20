@@ -55,14 +55,14 @@ export default function Services() {
             <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
               <Image
                 className="h-40 w-full object-cover sm:h-56 md:h-full"
-                src="/esthete.png"
+                src="/towfiqu-barbhuiya-ho-p7qLBewk-unsplash.jpg"
                 alt="logo"
                 width={200}
                 height={200}
               />
               <Image
                 className="h-40 w-full object-cover sm:h-56 md:h-full"
-                src="/esthete.png"
+                src="/ashwini-chaudhary-monty.jpg"
                 alt="logo"
                 width={200}
                 height={200}

@@ -21,9 +21,9 @@ export default function Home() {
             </div>
 
             <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
-              <button
+            <Link href="/book"
                 className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring"
-                type="button"
+                
               >
                 <span className="text-sm font-medium"> Book Cleaning </span>
 
@@ -41,7 +41,7 @@ export default function Home() {
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-              </button>
+              </Link>
 
               <button
                 className="block rounded-lg bg-fuchsia-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-fuchsia-700 focus:outline-none focus:ring"
@@ -100,7 +100,7 @@ export default function Home() {
             src="/anton-SnKfmC1I9fU-unsplash.jpg"
             className="h-56 w-full rounded-sm object-cover sm:h-full"
             width={427}
-            height={284}
+            height={224}
           />
         </section>
 

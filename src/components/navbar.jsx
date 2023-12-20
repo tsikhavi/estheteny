@@ -28,6 +28,9 @@ function Navbar() {
       </div>
       <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? 'block' : 'hidden'}`}>
         <div className="text-sm lg:flex-grow flex mx-2">
+        <Link href="/landing" className="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-fuchsia-700  mr-4">
+            Home
+          </Link>
           <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-fuchsia-700  mr-4">
             About Us
           </Link>
@@ -54,9 +57,9 @@ function Navbar() {
           </Link>
         </div>
         <div className="flex items-center justify-end mt-4 lg:mt-0">
-          <button className="inline-flex items-center bg-fuchsia-600 hover:bg-fuchsia-500 border-0 rounded-md py-2 px-4 text-gray-100">
+          <Link href="/contact" className="inline-flex items-center bg-fuchsia-600 hover:bg-fuchsia-500 border-0 rounded-md py-2 px-4 text-gray-100">
             Book Now
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

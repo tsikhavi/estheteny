@@ -42,10 +42,10 @@ export default function Cta() {
         </div>
       </div>
       <div className="flex items-center gap-8 p-8 lg:p-24">
-        <Image src="/esthete.png" className="w-1/2 rounded-lg" alt="Tree" width={50} height={50} />
+        <Image src="/jeshoots-com-__ZMnefoI3k-unsplash.jpg" className="w-1/2 rounded-lg" alt="Tree" width={500} height={500} />
         <div>
-          <Image src="/esthete.png" className="mb-8 rounded-lg" alt="Tree" width={50} height={50} />
-          <Image src="/esthete.png" className="rounded-lg" alt="Tree" width={50} height={50} />
+          <Image src="/towfiqu-barbhuiya-ho-p7qLBewk-unsplash.jpg" className="mb-8 rounded-lg" alt="Tree" width={500} height={500} />
+          <Image src="/nino-maghradze.jpg" className="rounded-lg" alt="Tree" width={500} height={500} />
         </div>
       </div>
     </div>
