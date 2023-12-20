@@ -1,0 +1,111 @@
+import Head from 'next/head';
+import Layout from '@/components/layout/MainLayout';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <Layout>
+      <Head>
+        <title>Esthete Cleaning Services - NYC</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <header>
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Welcome To Esthete Cleaning</h1>
+
+              <p className="mt-1.5 text-sm text-gray-500">Where Cleanliness Meets Perfection. 🎉</p>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+              <button
+                className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring"
+                type="button"
+              >
+                <span className="text-sm font-medium"> Book Cleaning </span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </button>
+
+              <button
+                className="block rounded-lg bg-fuchsia-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-fuchsia-700 focus:outline-none focus:ring"
+                type="button"
+              >
+                Quick Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex items-right text-black bg-white justify-right w-full ml-8 my-8 flex-1 px-4 text-center ">
+        <hr className="text-black b-2" />
+
+        <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
+          <div className="p-0 md:p-12 lg:px-16 lg:py-24">
+            <div className="mx-auto max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
+              <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Life&apos;s Too Short!</h2>
+
+              <p className="hidden text-gray-500 md:mt-4 md:block">
+                At Esthete Cleaning, we understand that life moves fast. From balancing work demands to family
+                commitments and personal goals, finding time for cleaning can feel impossible. That&apos;s where we step
+                in.
+              </p>
+
+              <div className="mt-4 md:mt-8">
+               
+              <Link href="/landing" type="button"
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-fuchsia-200 px-5 py-3 text-fuchsia-500 transition hover:bg-fuchsia-300 hover:text-fuchsia-700 focus:outline-none focus:ring"
+                >
+                <span className="text-sm font-medium"> Visit Site </span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+                </Link>
+              
+              </div>
+            </div>
+          </div>
+
+          <Image
+            alt="Student"
+            src="/anton-SnKfmC1I9fU-unsplash.jpg"
+            className="h-56 w-full rounded-sm object-cover sm:h-full"
+            width={427}
+            height={284}
+          />
+        </section>
+
+        <hr className="red-500" />
+      </main>
+    </Layout>
+  );
+}
