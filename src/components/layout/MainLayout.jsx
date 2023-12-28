@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import Footer from '@/components/footer';
 import MyMenu from '@/components/menu';
+import Navbar from '../navbar';
 
-export default function Layout({ children }) {
+import React from 'react';
+
+const Layout = ({ children }) => {
   const siteTitle = 'About Us Page';
   return (
     <>
@@ -18,8 +21,14 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="mx-0 px-10 bg-white">{children}</div>;
-      <Footer />
+
+      <main className="bg-white">
+        <Navbar />
+        {children}
+        <Footer />
+      </main>
     </>
   );
-}
+};
+
+export default Layout;

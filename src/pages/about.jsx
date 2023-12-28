@@ -4,11 +4,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
+import ProductMenuModal from '@/components/modal';
 
 export default function About() {
   const siteTitle = 'about us';
   return (
-    <Layout title={siteTitle}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Esthete Cleaning - Landing" />
@@ -24,7 +25,6 @@ export default function About() {
       </Head>
 
       <div>
-        <Navbar />
         <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <svg
@@ -56,7 +56,7 @@ export default function About() {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4">
                 <div className="lg:max-w-lg">
-                  <p className="text-base font-semibold leading-7 text-indigo-600">Welcome to Esthete Cleaning </p>
+                  <p className="text-base font-semibold leading-7 text-fuchsia-600">Welcome to Esthete Cleaning </p>
                   <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     - Your Trusted Partner for Immaculate Spaces
                   </h1>
@@ -64,12 +64,12 @@ export default function About() {
                     At Esthete Cleaning, we&apos;re more than just a cleaning service provider – we&apos;re dedicated to
                     transforming spaces into pristine sanctuaries. With years of expertise in the cleaning industry, we
                     take pride in our commitment to delivering unparalleled cleanliness and customer satisfaction.
-                    <Link href="" className="text-sm font-bold text-fuchsia-600">
+                    <Link href="/contact" className="text-sm font-bold text-fuchsia-600">
                       {' '}
                       Get in touch with us{' '}
                     </Link>{' '}
                     today to schedule an appointment or
-                    <Link href="" className="text-sm font-bold text-fuchsia-600">
+                    <Link href="/book" className="text-sm font-bold text-fuchsia-600">
                       {' '}
                       request a quote.{' '}
                     </Link>{' '}
@@ -78,20 +78,27 @@ export default function About() {
               </div>
             </div>
             <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-              <Image className="cursor-pointer w-8 sm:w-auto" src="/jeshoots-com-__ZMnefoI3k-unsplash.jpg" alt="logo" width={500} height={500} />
+              <Image
+                className="cursor-pointer w-8 sm:w-auto"
+                src="/Images/jeshoots-com-__ZMnefoI3k-unsplash.jpg"
+                alt="logo"
+                width={500}
+                height={500}
+              />
             </div>
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4">
-                <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                <div className="max-w-xl text-lg leading-7 text-gray-700 lg:max-w-lg">
                   <h2 className="my-8 text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Story</h2>
-                  <p>
+                  <p className="text-lg">
                     Esthete Cleaning NYC was founded on the principle that a clean environment contributes to a
                     healthier and happier lifestyle. What sets us apart is our unwavering dedication to excellence,
                     attention to detail, and our passion for delivering superior cleaning solutions.
                   </p>
+                  <h3 className="my-8 text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Hire Us</h3>
                   <ul role="list" className="mt-8 space-y-8 text-gray-600">
                     <li className="flex gap-x-3">
-                      <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                      <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-fuchsia-600" aria-hidden="true" />
                       <span>
                         <strong className="font-semibold text-gray-900">Uncompromising Quality:</strong> We adhere to
                         the highest standards of cleanliness, leaving no stone unturned in ensuring your space is
@@ -99,7 +106,7 @@ export default function About() {
                       </span>
                     </li>
                     <li className="flex gap-x-3">
-                      <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                      <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-fuchsia-600" aria-hidden="true" />
                       <span>
                         <strong className="font-semibold text-gray-900">Personalized Approach: </strong> We understand
                         that every space is different. That&apos;s why we customize our services to fit your specific
@@ -107,7 +114,7 @@ export default function About() {
                       </span>
                     </li>
                     <li className="flex gap-x-3">
-                      <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                      <ServerIcon className="mt-1 h-5 w-5 flex-none text-fuchsia-600" aria-hidden="true" />
                       <span>
                         <strong className="font-semibold text-gray-900">Trustworthiness: </strong> As an independent
                         entity, we offer unbiased recommendations, ensuring you receive the best cleaning solutions
@@ -117,7 +124,7 @@ export default function About() {
                   </ul>
                   <p className="mt-8">
                     Ready to experience the Esthete Cleaning difference?{' '}
-                    <Link href="" className="text-sm font-bold text-fuchsia-600">
+                    <Link href="/contact" className="text-sm font-bold text-fuchsia-600">
                       {' '}
                       Get in touch with us{' '}
                     </Link>{' '}
@@ -132,12 +139,14 @@ export default function About() {
                     in.
                   </p>
                   <blockquote>Esthete Cleaning - Where Cleanliness Meets Perfection.</blockquote>
+
+                  <ProductMenuModal />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

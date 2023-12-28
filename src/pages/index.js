@@ -1,111 +1,133 @@
+import React, { useState } from 'react';
+import Cta from '@/components/cta';
+import Accordion from '@/components/faq';
 import Head from 'next/head';
-import Layout from '@/components/layout/MainLayout';
-import Image from 'next/image';
-import Link from 'next/link';
+import MyMenu from '@/components/menu';
+import Navbar from '@/components/navbar';
+import MapCard from '@/components/MapCard';
+import ProductMenuModal from '@/components/modal';
 
-export default function Home() {
+export default function Landing() {
+  const [show, setShow] = useState(false);
+  const siteTitle = 'Home';
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Esthete Cleaning Services - NYC</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Esthete Cleaning - Landing" />
+        <title>{siteTitle}</title>
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header>
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <div className="text-center sm:text-left">
-              <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Welcome To Esthete Cleaning</h1>
-
-              <p className="mt-1.5 text-sm text-gray-500">Where Cleanliness Meets Perfection. 🎉</p>
+      <main className="py-12  overflow-y-hidden">
+        <div className="w-full px-6 bg-[url('/Images/work10.jpg')] ">
+          <div className="mt-8 relative rounded-lg bg-transparent container mx-auto flex flex-col items-center pt-8 lg:pt-16 pb-16 sm:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
+            <div className="w-full sm:w-2/3 mb-5 sm:mb-10 backdrop-blur-sm bg-fuchsia-100/30">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-fuchsia-700 font-bold leading-tight">
+                Esthete cleaning in NY, Manhattan, Brooklyn, Queens!{' '}
+              </h1>
+              <p className="text-base text-center text-fuchsia-600 py-4 backdrop-blur-sm bg-fuchsia-100/30">
+                <em>Book your cleaning in a few clicks. Free up time for life.</em>
+              </p>
             </div>
-
-            <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
-            <Link href="/book"
-                className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring"
-                
-              >
-                <span className="text-sm font-medium"> Book Cleaning </span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </Link>
-
+            <div className="flex justify-center items-center mb-5 sm:mb-10  lg:mb-20">
+              <ProductMenuModal />
               <button
-                className="block rounded-lg bg-fuchsia-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-fuchsia-700 focus:outline-none focus:ring"
-                type="button"
+                className="hover:text-gray-200 lg:text-xl hover:border-fuchsia-600 ml-3 sm:ml-6 
+                bg-transparent transition duration-150 ease-in-out focus:outline-none 
+                focus:ring-2 focus:ring-offset-2 ring-offset-fuchsia-700 focus:ring-white 
+                hover:bg-fuchsia-800 rounded border border-fuchsia-700 text-fuchsia-700 
+                px-4 sm:px-8 py-1 sm:py-3 text-sm"
               >
-                Quick Contact
+                Offers
               </button>
             </div>
           </div>
         </div>
-      </header>
 
-      <main className="flex items-right text-black bg-white justify-right w-full ml-8 my-8 flex-1 px-4 text-center ">
-        <hr className="text-black b-2" />
+        <Cta />
+        <div className="px-4 sm:px-8 lg:px-16 xl:px-20">
+          <h3 className="text-3xl text-center text-fuchsia-700 inline-flex">F.A.Q.S</h3>
 
-        <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
-          <div className="p-0 md:p-12 lg:px-16 lg:py-24">
-            <div className="mx-auto max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
-              <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">Life&apos;s Too Short!</h2>
-
-              <p className="hidden text-gray-500 md:mt-4 md:block">
-                At Esthete Cleaning, we understand that life moves fast. From balancing work demands to family
-                commitments and personal goals, finding time for cleaning can feel impossible. That&apos;s where we step
-                in.
+          <Accordion title="What are the payment arrangements?">
+            <ul>
+              <li className="py-1">
+                Secure your booking with a 50% pre-payment, with the remaining balance payable upon completion of
+                services.
+              </li>
+            </ul>
+          </Accordion>
+          <Accordion title="What is the Satisfaction Guaranteed?">
+            <div>
+              <p>
+                We prioritize customer satisfaction! Should you feel dissatisfied for any reason, kindly inform us
+                within 48 hours of your cleaning appointment. We&apos;ll promptly dispatch another service professional
+                at zero additional cost.
               </p>
-
-              <div className="mt-4 md:mt-8">
-               
-              <Link href="/landing" type="button"
-              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-fuchsia-200 px-5 py-3 text-fuchsia-500 transition hover:bg-fuchsia-300 hover:text-fuchsia-700 focus:outline-none focus:ring"
-                >
-                <span className="text-sm font-medium"> Visit Site </span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-                </Link>
-              
-              </div>
             </div>
-          </div>
-
-          <Image
-            alt="Student"
-            src="/anton-SnKfmC1I9fU-unsplash.jpg"
-            className="h-56 w-full rounded-sm object-cover sm:h-full"
-            width={427}
-            height={224}
-          />
-        </section>
-
-        <hr className="red-500" />
+          </Accordion>
+          <Accordion title="How soon can you arrive?">
+            <div>
+              <p>
+                At times, our cleaning service providers may arrive within 3-4 hours, but we suggest booking your
+                cleaning appointment at least 3 days in advance for the best experience!
+              </p>
+            </div>
+          </Accordion>
+          <Accordion title="Do I need to be at home during cleaning?">
+            <div>
+              <p>
+                No worries, there&apos;s no need for you to be home during our service. We&apos;ll chat about the
+                arrangements to ensure our cleaning providers can access your place.
+              </p>
+            </div>
+          </Accordion>
+          <Accordion title="What is your cancellation policy?">
+            <div>
+              <p>Please notify us no later than 24 hours before your appointment start time to avoid a fee.</p>
+            </div>
+          </Accordion>
+          <Accordion title="How many cleaning service providers will you send?">
+            <div>
+              <p>
+                Normally, we assign one service provider for apartment cleaning tasks. However, for more intensive jobs,
+                the crew size will be decided based on the specific requirements of the task.
+              </p>
+            </div>
+          </Accordion>
+          <Accordion title="What is your pet policy?">
+            <div>
+              <p>
+                We absolutely love pets and strive to create a pet-friendly cleaning experience! Yet, ensuring our
+                staff&apos;s safety is crucial. If, unfortunately, your pet exhibits aggressive behavior, we may need to
+                decline services and apply a cancellation fee.
+              </p>
+            </div>
+          </Accordion>
+          <Accordion title="How far in advance should I schedule an appointment?">
+            <div>
+              <p>
+                For the best scheduling, we suggest booking your appointment three days in advance. However, we also
+                offer same-day appointments in certain cases for your convenience!
+              </p>
+            </div>
+          </Accordion>
+          <Accordion title="What cleaning services are excluded from your cleaner's offerings?">
+            <p> </p>
+            <ul>
+              <li className="py-1">Cleaning walls and ceilings</li>
+              <li className="py-1">Exterior window cleaning</li>
+              <li className="py-1">Moving furniture or objects over 35 pounds</li>
+              <li className="py-1">Wiping TV screens or computer equipment</li>
+              <li className="py-1">Reaching inaccessible heights without proper equipment</li>
+              <li className="py-1">Meal preparation</li>
+              <li className="py-1">Providing services related to children.</li>
+            </ul>
+          </Accordion>
+        </div>
+        <MapCard />
       </main>
-    </Layout>
+    </>
   );
 }

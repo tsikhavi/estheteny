@@ -5,6 +5,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/react-tailwindcss-datetimepicker/dist/react-tailwindcss-datetimepicker.js',
   ],
   theme: {
     colors: {
@@ -42,10 +43,15 @@ module.exports = {
         700: '#15803d',
       },
       cyan: {
+        100: '#67e8f9',
+        200: '#67e8f9',
         300: '#67e8f9',
         400: '#22d3ee',
         500: '#06b6d4',
         600: '#0891b2',
+        700: '#67e8f9',
+        800: '#67e8f9',
+        900: '#67e8f9',
       },
       red: {
         400: '#f87171',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function FlipCard() {
   const [flips, setFlips] = useState([false, false, false, false]);
@@ -13,7 +14,12 @@ function FlipCard() {
     'Let us handle the aftermath of your celebration with precision - our after-party cleaning service swiftly restores your space to its pre-celebration state, ensuring a hassle-free and immaculate post-event environment.',
   ];
 
-  const imageUrls = ['/esthete.png', '/esthete.png', '/esthete.png', '/esthete.png'];
+  const imageUrls = [
+    '/Images/work4.jpg',
+    '/Images/nino-maghradze.jpg',
+    '/Images/towfiqu-barbhuiya-ho-p7qLBewk-unsplash.jpg',
+    '/Images/ashwini-chaudhary-monty.jpg',
+  ];
 
   const handleFlip = index => {
     const newFlips = [...flips];
@@ -22,9 +28,9 @@ function FlipCard() {
   };
 
   return (
-    <div className="flex text-base">
+    <div className="flex flex-wrap text-base">
       {flips.map((isFlipped, index) => (
-        <div key={index} className="m-4">
+        <div key={index} className="m-4 sm:w-1/2 md:w-1/3 lg:w-1/4">
           <Flip
             key={index}
             isFlipped={isFlipped}
@@ -43,23 +49,29 @@ function FlipCard() {
 function Flip({ isFlipped, flipDirection, frontContent, backContent, image, setFlip }) {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection={flipDirection}>
-      <div className="bg-gradient w-300 h-200 text-gray-600 rounded-lg text-center p-20">
-        <Image src={image} alt={frontContent} className="mx-auto mb-4 p-2" width={52} height={52} />{' '}
-        {/* Display image */}
+      <div className="bg-fuchsia-100 w-full h-64 text-gray-600 rounded-lg text-center p-8">
+        <Image
+          src={image}
+          alt={frontContent}
+          className="mx-auto mb-4 p-2 rounded-full h-32 w-32"
+          width={720}
+          height={720}
+        />
         {frontContent}
         <br />
         <br />
         <button
-          className="w-100 px-10 text-fuchsia-500 bg-radial hover:bg-gray-400 font-bold rounded-md"
+          className="w-full px-6 text-fuchsia-500 bg-radial hover:bg-gray-400 font-bold text-base rounded-md"
           onClick={setFlip}
+          title="click to find out more"
         >
-          More
+          More...
         </button>
       </div>
-      <div className="bg-fuchsia-100 w-300 h-200 text-gray-700 rounded-lg text-left p-10">
+      <div className="bg-fuchsia-100 w-full h-64 text-gray-700 rounded-lg text-left p-8">
         {backContent}
         <br />
-        <button className="w-100 px-10 text-fuchsia-700 bg-gradient font-bold rounded-md mt-8" onClick={setFlip}>
+        <button className="w-full px-6 text-fuchsia-700 bg-gradient font-bold rounded-md mt-4" onClick={setFlip}>
           Back
         </button>
       </div>

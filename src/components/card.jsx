@@ -1,24 +1,50 @@
-import React from 'react';
+import { Carousel } from '@material-tailwind/react';
 import Image from 'next/image';
 
-export default function Card() {
+export default function CarouselCustomNavigation() {
   return (
-    <div className="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:max-w-xl md:flex-row">
+    <Carousel
+      className="rounded-xl"
+      navigation={({ setActiveIndex, activeIndex, length }) => (
+        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+          {new Array(length).fill('').map((_, i) => (
+            <span
+              key={i}
+              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                activeIndex === i ? 'w-8 bg-white' : 'w-4 bg-white/50'
+              }`}
+              onClick={() => setActiveIndex(i)}
+            />
+          ))}
+        </div>
+      )}
+    >
+      <Image className="h-full w-full object-cover" src="/Images/work1.jpg" alt="logo" width={720} height={720} />
+      <Image className="h-full w-full object-cover" src="/Images/work2.jpg" alt="logo" width={720} height={720} />
+
+      <Image className="h-full w-full object-cover" src="/Images/work4.jpg" alt="logo" width={720} height={720} />
+      <Image className="h-full w-full object-cover" src="/Images/work5.jpg" alt="logo" width={720} height={720} />
       <Image
-        className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-        src="/esthete.png"
-        width={32}
-        height={32}
-        alt="main-logo"
+        className="h-40 w-full object-cover sm:h-56 md:h-full"
+        src="/Images/IMG_20231202_220058_234.jpg"
+        alt="logo"
+        width={720}
+        height={720}
       />
-      <div className="flex flex-col justify-start p-6">
-        <h5 className="mb-2 text-xl font-medium text-neutral-800 ">Card title</h5>
-        <p className="mb-4 text-base text-neutral-600 ">
-          This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
-          little bit longer.
-        </p>
-        <p className="text-xs text-neutral-500 ">Last updated 3 mins ago</p>
-      </div>
-    </div>
+      <Image
+        className="h-40 w-full object-cover sm:h-56 md:h-full"
+        src="/Images/IMG_20231202_220058_860.jpg"
+        alt="logo"
+        width={720}
+        height={720}
+      />
+      <Image
+        className="h-40 w-full object-cover sm:h-56 md:h-full"
+        src="/Images/IMG_20231202_220105_699.jpg"
+        alt="logo"
+        width={720}
+        height={720}
+      />
+    </Carousel>
   );
 }
