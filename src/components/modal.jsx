@@ -78,11 +78,11 @@ const ProductMenuModal = () => {
                 <li className="mb-4">
                   <div className="flex items-center justify-between">
                     <Image
-                      width={18}
-                      height={18}
+                      width={720}
+                      height={720}
                       src="/Images/IMG_20231202_215953_442.jpg"
                       alt="Regular Cleaning"
-                      className="w-16 h-16 object-cover rounded mr-2"
+                      className="w-16 h-16 object-cover rounded-xl mr-2"
                     />
                     <span>Regular Cleaning</span>
                     <button
@@ -109,11 +109,11 @@ const ProductMenuModal = () => {
                 <li className="mb-4">
                   <div className="flex items-center justify-between">
                     <Image
-                      width={18}
-                      height={18}
+                      width={720}
+                      height={720}
                       src="/Images/nino-maghradze.jpg"
                       alt="Post Renovation"
-                      className="w-16 h-16 object-cover rounded mr-2"
+                      className="w-16 h-16 object-cover rounded-xl mr-2"
                     />
                     <span>Post Renovation/hr </span>
                     <button
@@ -140,11 +140,11 @@ const ProductMenuModal = () => {
                 <li className="mb-4">
                   <div className="flex items-center justify-between">
                     <Image
-                      width={18}
-                      height={18}
+                      width={720}
+                      height={720}
                       src="/Images/work12.jpg"
                       alt="Deep Cleaning"
-                      className="w-16 h-16 object-cover rounded mr-2"
+                      className="w-16 h-16 object-cover rounded-xl mr-2"
                     />
                     <span>Deep Cleaning</span>
                     <button
@@ -171,11 +171,11 @@ const ProductMenuModal = () => {
                 <li className="mb-4">
                   <div className="flex items-center justify-between">
                     <Image
-                      width={18}
-                      height={18}
+                      width={720}
+                      height={720}
                       src="/Images/IMG_20231212_204746_527.jpg"
                       alt="After Party"
-                      className="w-16 h-16 object-cover rounded mr-2"
+                      className="w-16 h-16 object-cover rounded-xl mr-2"
                     />
                     <span>After Party/hr</span>
                     <button
