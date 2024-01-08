@@ -182,11 +182,11 @@ export default function Footer() {
       {/* <!--Copyright section--> */}
       <div className="bg-allports-900 p-6 text-center ">
         
-        <span>© {year} All Right Reserved: </span>
+        <span className='text-white'>© {year} All Right Reserved: </span>
         <Link className="font-semibold text-allports-100  " href="/">
           Esthete cleaning
         </Link>
-        <span> | Created by: </span>
+        <span className='text-white'> | Created by: </span>
         <Link className="font-semibold text-allports-100  " href="/">
           Sautis
         </Link>
