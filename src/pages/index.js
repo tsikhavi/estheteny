@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Cta from '@/components/cta';
 import Accordion from '@/components/faq';
 import Head from 'next/head';
-import MyMenu from '@/components/menu';
-import Navbar from '@/components/navbar';
 import MapCard from '@/components/MapCard';
-import ProductMenuModal from '@/components/modal';
+import Link from 'next/head';
+import Banner from '@/components/Banner';
+import Reviews from '@/components/reviews';
 
 export default function Landing() {
   const [show, setShow] = useState(false);
@@ -18,41 +18,47 @@ export default function Landing() {
         <title>{siteTitle}</title>
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
       </Head>
 
-      <main className="py-12  overflow-y-hidden">
-        <div className="w-full px-6 bg-[url('/Images/work10.jpg')] ">
-          <div className="mt-8 relative rounded-lg bg-transparent container mx-auto flex flex-col items-center pt-8 lg:pt-16 pb-16 sm:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
-            <div className="w-full sm:w-2/3 mb-5 sm:mb-10 backdrop-blur-sm bg-fuchsia-100/30">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-fuchsia-700 font-bold leading-tight">
-                Esthete cleaning in NY, Manhattan, Brooklyn, Queens!{' '}
+      <main className=" overflow-x-hidden min-w-[1] max-w-[1]">
+        <section>
+          <div className="relative top-40 -z-50 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+            <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+              <h1 className="text-3xl font-extrabold sm:text-5xl">
+                Let us find your
+                <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
               </h1>
-              <p className="text-base text-center text-fuchsia-600 py-4 backdrop-blur-sm bg-fuchsia-100/30">
-                <em>Book your cleaning in a few clicks. Free up time for life.</em>
+
+              <p className="mt-4 max-w-lg sm:text-xl/relaxed">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
               </p>
-            </div>
-            <div className="flex justify-center items-center mb-5 sm:mb-10  lg:mb-20">
-              <ProductMenuModal />
-              <button
-                className="hover:text-gray-200 lg:text-xl hover:border-fuchsia-600 ml-3 sm:ml-6 
-                bg-transparent transition duration-150 ease-in-out focus:outline-none 
-                focus:ring-2 focus:ring-offset-2 ring-offset-fuchsia-700 focus:ring-white 
-                hover:bg-fuchsia-800 rounded border border-fuchsia-700 text-fuchsia-700 
-                px-4 sm:px-8 py-1 sm:py-3 text-sm"
-              >
-                Offers
-              </button>
+
+              <div className="mt-8 flex flex-wrap gap-4 text-center">
+                <Link
+                  href="#"
+                  className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                >
+                  Get Started
+                </Link>
+
+                <Link
+                  href="#"
+                  className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-
+        </section>
         <Cta />
         <div className="px-4 sm:px-8 lg:px-16 xl:px-20">
-          <h3 className="text-3xl text-center text-fuchsia-700 inline-flex">F.A.Q.S</h3>
+          <h3 className="text-3xl mx-auto text-center text-allports-700 flex-auto my-12">F.A.Q.S</h3>
 
           <Accordion title="What are the payment arrangements?">
             <ul>
-              <li className="py-1">
+              <li className="py-1 ">
                 Secure your booking with a 50% pre-payment, with the remaining balance payable upon completion of
                 services.
               </li>
@@ -115,7 +121,7 @@ export default function Landing() {
           </Accordion>
           <Accordion title="What cleaning services are excluded from your cleaner's offerings?">
             <p> </p>
-            <ul>
+            <ul className="list-disc ml-8">
               <li className="py-1">Cleaning walls and ceilings</li>
               <li className="py-1">Exterior window cleaning</li>
               <li className="py-1">Moving furniture or objects over 35 pounds</li>
@@ -126,6 +132,9 @@ export default function Landing() {
             </ul>
           </Accordion>
         </div>
+        <section className="pt-20">
+          <Reviews />
+        </section>
         <MapCard />
       </main>
     </>

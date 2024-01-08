@@ -8,6 +8,20 @@ module.exports = {
     './node_modules/react-tailwindcss-datetimepicker/dist/react-tailwindcss-datetimepicker.js',
   ],
   theme: {
+    fontFamily: {
+      sans: ['ui-sans-serif', 'system-ui'],
+      serif: ['ui-serif', 'Georgia'],
+      mono: ['ui-monospace', 'SFMono-Regular'],
+      display: ['Oswald'],
+      body: ['"Open Sans"'],
+    },
+    screens: {
+      sm: '640px', // Small screens
+      md: '768px', // Medium screens
+      lg: '1024px', // Large screens
+      xl: '1280px', // Extra-large screens
+      '2xl': '1536px', // 2x extra-large screens
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -24,17 +38,18 @@ module.exports = {
         800: '#1f2937',
         900: '#111827',
       },
-      fuchsia: {
-        50: '#fdf4ff',
-        100: '#fae8ff',
-        200: '#c026d3',
-        300: '#f0abfc',
-        400: '#e879f9',
-        500: '#d946ef',
-        600: '#c026d3',
-        700: '#a21caf',
-        800: '#86198f',
-        900: '#4a044e',
+      allports: {
+        50: '#f2f8fd',
+        100: '#e4f0fa',
+        200: '#c3e0f4',
+        300: '#8ec8eb',
+        400: '#52abde',
+        500: '#2c91cb',
+        600: '#1d73ac',
+        700: '#195c8b',
+        800: '#184f74',
+        900: '#194261',
+        950: '#112a40',
       },
       green: {
         400: '#4ade80',
@@ -42,34 +57,17 @@ module.exports = {
         600: '#c026d3',
         700: '#15803d',
       },
-      cyan: {
-        100: '#67e8f9',
-        200: '#67e8f9',
-        300: '#67e8f9',
-        400: '#22d3ee',
-        500: '#06b6d4',
-        600: '#0891b2',
-        700: '#67e8f9',
-        800: '#67e8f9',
-        900: '#67e8f9',
-      },
       red: {
         400: '#f87171',
         500: '#ef4444',
         600: '#dc2626',
       },
-      purple: {
-        400: '#c084fc',
-        500: '#a855f7',
-        600: '#9333ea',
-        700: '#a21caf',
-      },
     },
 
     extend: {
       backgroundImage: {
-        gradient: 'linear-gradient(to bottom, #ffffff, #f5d0fe)',
-        radial: 'radial-gradient(white, #fdf4ff)',
+        gradient: 'linear-gradient(to bottom, #ffffff, #f2f8fd)',
+        radial: 'radial-gradient(white, #8ec8eb)',
       },
       fontSize: {
         '2xs': '0.625rem', // Extra Extra Small

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import BackToTopButton from './BackToTopButton';
+import CookieComponent from '@/CookieComponent';
+import PasswordInput from '@/components/TogglePassword';
 
 export default function Footer() {
   const [year, setYear] = useState(0);
@@ -15,15 +18,18 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#313638] text-center text-white text-base lg:text-left">
+    <footer className=" mt-8 bg-gradient-to-l from-allports-200 to-allports-100 text-center text-allports-900 text-base lg:text-left">
+      <div>
+        <BackToTopButton />
+      </div>
       <div className="flex items-center justify-center border-b-2 border-gray-200 p-6 dark:border-gray-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
-          <span className="text-fuchsia-100">Get connected with us on social networks:</span>
+          <span className="text-allports-100">Get connected with us on social networks:</span>
         </div>
         {/* <!-- Social network icons container --> */}
         <div className="flex justify-center">
           <Link
-            className="mr-6 text-gray-100 text-base hover:text-fuchsia-100 inline-flex"
+            className="mr-6 text-allports-900 text-base hover:text-allports-700 inline-flex"
             target="blank"
             href="https://www.instagram.com/cleaning_esthete_nyc/"
           >
@@ -46,31 +52,33 @@ export default function Footer() {
               <Image className="mr-3 " src="/esthete.png" alt="" width={50} height={50} />
               Esthete Cleaning
             </h6>
-            <p>
+            <p className="text-allports-800">
               Life&apos;s too short! Let ESTHETE CLEANING take the hassle out of cleaning your home. You are a few
               clicks away from a stress-free life!
             </p>
           </div>
           {/* <!-- Products section --> */}
           <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">Products</h6>
+            <h6 className="mb-4 flex justify-center font-semibold text-allports-700 uppercase md:justify-start">
+              Products
+            </h6>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/">
                 Regular Cleaning
               </Link>
             </p>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/">
                 Deep Cleaning
               </Link>
             </p>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/">
                 Post Renovation Cleaning
               </Link>
             </p>
             <p>
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/">
                 After party clean up
               </Link>
             </p>
@@ -79,23 +87,23 @@ export default function Footer() {
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">Useful links</h6>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/book">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/book">
                 Pricing
               </Link>
             </p>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/services">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/services">
                 Services
               </Link>
             </p>
             <p className="mb-4">
-              <Link className="text-fuchsia-100  hover:text-fuchsia-200 " href="/extra-services">
+              <Link className="text-allports-700  hover:text-allports-500 " href="/extra-services">
                 Offers
               </Link>
             </p>
             <p>
               <Link
-                className="text-fuchsia-100  hover:text-fuchsia-200 "
+                className="text-allports-700  hover:text-allports-500 "
                 href="mailto:esthete.cleaning@gmail.com?
             cc=nesssh17@gmail.com
             &bcc=sautisapp@gmail.com
@@ -116,7 +124,7 @@ export default function Footer() {
               </svg>
               New York, NY 10012, US
             </p>
-            <p className="mb-4 flex items-center justify-center md:justify-start text-fuchsia-100  hover:text-fuchsia-200">
+            <p className="mb-4 flex items-center justify-center md:justify-start text-allports-700  hover:text-allports-500">
               <Link
                 href="mailto:esthete.cleaning@gmail.com?
             cc=nesssh17@gmail.com
@@ -136,7 +144,7 @@ export default function Footer() {
                 esthete.cleaning@gmail.com
               </Link>
             </p>
-            <p className="mb-4 flex items-center justify-center md:justify-start text-fuchsia-100  hover:text-fuchsia-200">
+            <p className="mb-4 flex items-center justify-center md:justify-start text-allports-700  hover:text-allports-500">
               <Link href="tel:+16465780645">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +161,7 @@ export default function Footer() {
                 +1 (646)578-0645
               </Link>
             </p>
-            <p className="flex items-center justify-center md:justify-start text-fuchsia-100  hover:text-fuchsia-200">
+            <p className="flex items-center justify-center md:justify-start text-allports-700  hover:text-allports-500">
               <Link href="https://wa.me/16465780645">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -172,13 +180,14 @@ export default function Footer() {
       </div>
 
       {/* <!--Copyright section--> */}
-      <div className="bg-fuchsia-900 p-6 text-center ">
+      <div className="bg-allports-900 p-6 text-center ">
+        <PasswordInput />
         <span>© {year} All Right Reserved: </span>
-        <Link className="font-semibold text-fuchsia-100  " href="/">
+        <Link className="font-semibold text-allports-100  " href="/">
           Esthete cleaning
         </Link>
         <span> | Created by: </span>
-        <Link className="font-semibold text-fuchsia-100  " href="/">
+        <Link className="font-semibold text-allports-100  " href="/">
           Sautis
         </Link>
       </div>

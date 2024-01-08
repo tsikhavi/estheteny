@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Footer from '@/components/footer';
-import MyMenu from '@/components/menu';
 import Navbar from '../navbar';
 
 import React from 'react';
@@ -22,11 +21,11 @@ const Layout = ({ children }) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <main className="bg-white">
+      <main className="bg-transparent mx-12">
         <Navbar />
         {children}
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };

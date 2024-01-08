@@ -2,12 +2,12 @@ import Image from 'next/image';
 import ProductMenuModal from './modal';
 export default function Cta() {
   return (
-    <div className="bg-inherit  overflow-hidden relative lg:flex lg:items-center">
+    <div className="bg-transparent  overflow-hidden -z-50 relative lg:flex lg:items-center">
       <div className="w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
         <h2 className="text-3xl font-extrabold text-black  sm:text-4xl">
           <span className="block">What Makes Us Different?</span>
         </h2>
-        <p className="text-base mt-4 text-gray-400">Best cleaning in New York: Manhattan, Brooklyn & Queens!</p>
+        <p className="text-base mt-4 text-gray-400">Best cleaning in New York, Manhattan!</p>
         <div class="p-6">
           <ul class="list-disc list-inside space-y-2">
             <li class="flex items-center">

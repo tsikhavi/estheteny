@@ -1,3 +1,11 @@
 {
-  "recommendations": ["alvaai.alva"]
+  "recommendations": [
+    "alvaai.alva",
+    "loczek.next-js-ts-snippets",
+    "sudoaugustin.tailwindcss-transpiler",
+    "bradlc.vscode-tailwindcss",
+    "webhint.vscode-webhint",
+    "zarifprogrammer.tailwind-snippets",
+    "pulkitgangwar.nextjs-snippets"
+  ]
 }

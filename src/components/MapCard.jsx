@@ -1,6 +1,6 @@
 export default function MapCard() {
   return (
-    <>
+    <section className="mt-20">
       <h2 className="capitalize hover:uppercase text-2xl my-8 mx-auto text-center">
         Find Us On the Map
         <span className="relative inline-flex h-3 w-3 mx-2">
@@ -30,16 +30,16 @@ export default function MapCard() {
       <div className="flex justify-center w-full">
         <div className="max-w-screen-lg w-full mx-auto">
           <iframe
-            className="w-full h-96 md:h-80 lg:h-96"
+            className="w-full overflow-x-hidden h-96 md:h-80 lg:h-96"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.183951891619!2d-73.9901560239469!3d40.75797867157777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2ske!4v1703713699378!5m2!1sen!2ske"
-            width={600}
+            width={700}
             height={300}
-            allowfullscreen=""
+            allowFullscreen="yes"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
-    </>
+    </section>
   );
 }

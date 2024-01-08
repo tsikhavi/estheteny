@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import DateTime from '../datepicker';
-import BookDate from '../date-time';
 
 const CheckoutForm = () => {
   const [formData, setFormData] = useState({
@@ -106,9 +105,7 @@ const CheckoutForm = () => {
                 <option value="after_party">After Party Cleaning</option>
               </select>
             </div>
-            <div className="flex flex-col">
-              <BookDate />
-            </div>
+            <div className="flex flex-col"></div>
 
             <div>
               <DateTime />

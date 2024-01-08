@@ -15,7 +15,7 @@ const DateTime = () => {
   return (
     <Datepicker
       className="text-gray-800"
-      primaryColor={'fuchsia'}
+      primaryColor={'allports-500'}
       value={value}
       onChange={handleValueChange}
       showShortcuts={true}

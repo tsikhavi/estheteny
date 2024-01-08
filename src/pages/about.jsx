@@ -1,5 +1,3 @@
-import Navbar from '@/components/navbar';
-import Layout from '@/layout/MainLayout';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
@@ -60,7 +58,7 @@ export default function About() {
                   <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     - Your Trusted Partner for Immaculate Spaces
                   </h1>
-                  <p className="mt-6 text-xl leading-8 text-gray-700">
+                  <p className="mt-6 font-roboto text-xl leading-8 text-gray-700">
                     At Esthete Cleaning, we&apos;re more than just a cleaning service provider – we&apos;re dedicated to
                     transforming spaces into pristine sanctuaries. With years of expertise in the cleaning industry, we
                     take pride in our commitment to delivering unparalleled cleanliness and customer satisfaction.
@@ -79,7 +77,7 @@ export default function About() {
             </div>
             <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
               <Image
-                className="cursor-pointer w-8 sm:w-auto"
+                className="cursor-pointer w-8 sm:w-auto rounded-lg"
                 src="/Images/jeshoots-com-__ZMnefoI3k-unsplash.jpg"
                 alt="logo"
                 width={500}

@@ -49,7 +49,7 @@ function FlipCard() {
 function Flip({ isFlipped, flipDirection, frontContent, backContent, image, setFlip }) {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection={flipDirection}>
-      <div className="bg-fuchsia-100 w-full h-64 text-gray-600 rounded-lg text-center p-8">
+      <div className="bg-allports-100 w-full h-64 text-gray-600 rounded-lg text-center p-8">
         <Image
           src={image}
           alt={frontContent}
@@ -61,17 +61,17 @@ function Flip({ isFlipped, flipDirection, frontContent, backContent, image, setF
         <br />
         <br />
         <button
-          className="w-full px-6 text-fuchsia-500 bg-radial hover:bg-gray-400 font-bold text-base rounded-md"
+          className="w-full px-6 text-allports-500 bg-radial hover:bg-gray-400 font-bold text-base rounded-md"
           onClick={setFlip}
           title="click to find out more"
         >
           More...
         </button>
       </div>
-      <div className="bg-fuchsia-100 w-full h-64 text-gray-700 rounded-lg text-left p-8">
+      <div className="bg-allports-100 w-full h-64 text-gray-700 rounded-lg text-left p-8">
         {backContent}
         <br />
-        <button className="w-full px-6 text-fuchsia-700 bg-gradient font-bold rounded-md mt-4" onClick={setFlip}>
+        <button className="w-full px-6 text-allports-700 bg-allports-100 font-bold rounded-md mt-4" onClick={setFlip}>
           Back
         </button>
       </div>

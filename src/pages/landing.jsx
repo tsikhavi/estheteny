@@ -3,7 +3,6 @@ import Cta from '@/components/cta';
 import Accordion from '@/components/faq';
 import Head from 'next/head';
 import MyMenu from '@/components/menu';
-import Navbar from '@/components/navbar';
 import MapCard from '@/components/MapCard';
 import ProductMenuModal from '@/components/modal';
 
@@ -24,20 +23,20 @@ export default function Landing() {
         <div className="w-full px-6 bg-gradient-to-l">
           <div className="mt-8 relative rounded-lg bg-transparent container mx-auto flex flex-col items-center pt-8 lg:pt-16 pb-16 sm:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
             <div className="w-full sm:w-2/3 mb-5 sm:mb-10">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-fuchsia-700 font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-allports-700 font-bold leading-tight">
                 Esthete cleaning in NY, Manhattan, Brooklyn, Queens!{' '}
               </h1>
-              <p className="text-base text-center text-fuchsia-600 py-4">
+              <p className="text-base text-center text-allports-600 py-4">
                 <em>Book your cleaning in a few clicks. Free up time for life.</em>
               </p>
             </div>
             <div className="flex justify-center items-center mb-5 sm:mb-10 lg:mb-20">
               <ProductMenuModal />
               <button
-                className="hover:text-gray-200 lg:text-xl hover:border-fuchsia-600 ml-3 sm:ml-6 
+                className="hover:text-gray-200 lg:text-xl hover:border-allports-600 ml-3 sm:ml-6 
                 bg-transparent transition duration-150 ease-in-out focus:outline-none 
-                focus:ring-2 focus:ring-offset-2 ring-offset-fuchsia-700 focus:ring-white 
-                hover:bg-fuchsia-800 rounded border border-fuchsia-700 text-fuchsia-700 
+                focus:ring-2 focus:ring-offset-2 ring-offset-allports-700 focus:ring-white 
+                hover:bg-allports-800 rounded border border-allports-700 text-allports-700 
                 px-4 sm:px-8 py-1 sm:py-3 text-sm"
               >
                 Offers
@@ -49,7 +48,7 @@ export default function Landing() {
         <MyMenu />
         <Cta />
         <div className="px-4 sm:px-8 lg:px-16 xl:px-20">
-          <h3 className="text-3xl text-center text-fuchsia-700 inline-flex">F.A.Q.S</h3>
+          <h3 className="text-3xl text-center text-allports-700 inline-flex">F.A.Q.S</h3>
 
           <Accordion title="What are the payment arrangements?">
             <ul>

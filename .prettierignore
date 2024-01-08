@@ -6,3 +6,5 @@ coverage
 **/*.html
 **/.git
 **/node_modules
+**/*.jpg
+**/*.png

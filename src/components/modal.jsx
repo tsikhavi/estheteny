@@ -37,8 +37,8 @@ const ProductMenuModal = () => {
       <button
         onClick={openModal}
         className=" hover:text-gray-600 hover:bg-white lg:text-xl hover:border-gray-400 
-              border bg-fuchsia-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 
-              ring-offset-fuchsia-700	focus:ring-fuchsia-500 rounded text-gray-200 px-4 sm:px-8 py-1 sm:py-3 text-sm
+              border bg-allports-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 
+              ring-offset-allports-700	focus:ring-allports-500 rounded text-gray-200 px-4 sm:px-8 py-1 sm:py-3 text-sm
       
       "
       >
@@ -87,7 +87,7 @@ const ProductMenuModal = () => {
                     <span>Regular Cleaning</span>
                     <button
                       onClick={() => addToCart('Regular Cleaning', 105)}
-                      className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-3 py-1 rounded"
+                      className="bg-allports-500 hover:bg-allports-600 text-white px-3 py-1 rounded"
                     >
                       Add to Cart
                     </button>
@@ -118,7 +118,7 @@ const ProductMenuModal = () => {
                     <span>Post Renovation/hr </span>
                     <button
                       onClick={() => addToCart('Post Renovation', 50)}
-                      className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-3 py-1 rounded"
+                      className="bg-allports-500 hover:bg-allports-600 text-white px-3 py-1 rounded"
                     >
                       Add to Cart
                     </button>
@@ -149,7 +149,7 @@ const ProductMenuModal = () => {
                     <span>Deep Cleaning</span>
                     <button
                       onClick={() => addToCart('Deep Cleaning', 150)}
-                      className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-3 py-1 rounded"
+                      className="bg-allports-500 hover:bg-allports-600 text-white px-3 py-1 rounded"
                     >
                       Add to Cart
                     </button>
@@ -180,7 +180,7 @@ const ProductMenuModal = () => {
                     <span>After Party/hr</span>
                     <button
                       onClick={() => addToCart('After Party', 40)}
-                      className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-3 py-1 rounded"
+                      className="bg-allports-500 hover:bg-allports-600 text-white px-3 py-1 rounded"
                     >
                       Add to Cart
                     </button>
@@ -231,7 +231,7 @@ const ProductMenuModal = () => {
             {/* Checkout Button */}
             <button
               onClick={handleCheckout}
-              className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-4 py-2 mt-4 rounded"
+              className="bg-allports-500 hover:bg-allports-600 text-white px-4 py-2 mt-4 rounded"
             >
               Checkout
             </button>
