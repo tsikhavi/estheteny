@@ -26,9 +26,8 @@ export default function Landing() {
           <div className="relative top-40 -z-50 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
               <h1 className="text-3xl font-extrabold sm:text-5xl">
-              <strong className="block font-extrabold text-rose-700"> Esthete Cleaning </strong>
+                <strong className="block font-extrabold text-rose-700"> Esthete Cleaning </strong>
                 Best Cleaning Services in New York.
-                
               </h1>
 
               <p className="mt-4 max-w-lg sm:text-xl/relaxed">
