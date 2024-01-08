@@ -181,7 +181,7 @@ export default function Footer() {
 
       {/* <!--Copyright section--> */}
       <div className="bg-allports-900 p-6 text-center ">
-        <PasswordInput />
+        
         <span>© {year} All Right Reserved: </span>
         <Link className="font-semibold text-allports-100  " href="/">
           Esthete cleaning
