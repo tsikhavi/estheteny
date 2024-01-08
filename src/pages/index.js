@@ -23,16 +23,16 @@ export default function Landing() {
 
       <main className=" overflow-x-hidden min-w-[1] max-w-[1]">
         <section>
-          <div className="relative top-40 -z-50 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+          <div className="relative my-40 -z-50 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-              <h1 className="text-3xl font-extrabold sm:text-5xl">
+              <h1 className="text-3xl text-left font-extrabold sm:text-5xl">
                 <strong className="block font-extrabold text-rose-700"> Esthete Cleaning </strong>
-                Best Cleaning Services in New York.
+                Best Cleaning Services in New York, Manhattan.
               </h1>
 
-              <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
-              </p>
+              <p className="mt-4 max-w-lg text-left sm:text-xl/relaxed">
+              Life&apos;s too short to spend it cleaning! Let Esthete Cleaning whisk away the burden of maintaining your home. 
+              Our dedicated team ensures a pristine, sparkling space without you lifting a finger              </p>
 
               <div className="mt-8 flex flex-wrap gap-4 text-center">
                 <Link

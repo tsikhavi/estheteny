@@ -66,13 +66,10 @@ function Section() {
               <h2 className="text-3xl font-bold sm:text-4xl">Esthete Cleaning Services</h2>
 
               <p className="mt-4 text-gray-600">
-                Life&apos;s too short to spend it cleaning! Let Esthete Cleaning whisk away the burden of maintaining
-                your home. Our dedicated team ensures a pristine, sparkling space without you lifting a finger. With
-                just a few clicks, embark on a stress-free journey towards a spotless haven. Our comprehensive cleaning
-                services cater to your specific needs, from deep cleans to regular upkeep. Experience the luxury of a
-                meticulously cleaned home, allowing you to focus on what truly matters. Reclaim your time and energy &dash;
-                trust Esthete Cleaning for a home that radiates freshness and cleanliness. Book now and discover the
-                ease of a beautifully maintained space!
+                Our comprehensive cleaning services cater to your specific needs, from deep cleans to regular upkeep.
+                Experience the luxury of a meticulously cleaned home, allowing you to focus on what truly matters.
+                Reclaim your time and energy &mdash; trust Esthete Cleaning for a home that radiates freshness and
+                cleanliness. Book now and discover the ease of a beautifully maintained space!
               </p>
 
               <Link
@@ -104,8 +101,7 @@ function Carousel() {
         <Image class="h-4/6 w-full object-cover" src="/Images/unsplash4.jpg" alt="" width={720} height={720} />
         <h1 class="mt-4 px-4 text-center font-serif text-xl font-semibold text-rose-500">Regular Cleaning</h1>
         <p class="mt-1 px-4 text-base text-left text-gray-600">
-          Say goodbye to the hassle and reclaim your time with our top-notch
-          cleaning services.
+          Say goodbye to the hassle and reclaim your time with our top-notch cleaning services.
         </p>
       </div>
 
@@ -118,11 +114,11 @@ function Carousel() {
           your cleaning needs. With just a few clicks, you&apos;re on your way to reclaiming your valuable time. Whether
           it&apos;s regular upkeep or a deep clean, our tailored services fit your schedule and preferences perfectly.
           <Link
-                href="#"
-                className="mt-8 inline-block rounded bg-allports-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-allports-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              >
-                Get Started Today
-              </Link>
+            href="#"
+            className="mt-8 inline-block rounded bg-allports-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-allports-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          >
+            Get Started Today
+          </Link>
         </p>
       </div>
     </div>
